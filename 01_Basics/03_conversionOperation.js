@@ -32,3 +32,27 @@ let stringNumber = String(num)
 
 console.log(stringNumber);          //123
 console.log(typeof stringNumber);  //string
+
+
+console.log("\n**** Operations console logs *****\n");
+//*************** Operations **************/
+
+let positiveNum = 123;
+
+let negativeNum = -positiveNum
+
+console.log(negativeNum);
+
+let fName = "Vinay "
+let lName = "Kumar"
+
+let fullName = fName + lName
+
+console.log(fullName);
+
+console.log(1 + "2");       //12
+console.log("1" + 2);       //12
+console.log("1" + 2 + 3);   //123
+console.log(1 + 2 + "3");   //33
+
+
