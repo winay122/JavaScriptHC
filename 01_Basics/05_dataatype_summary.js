@@ -34,4 +34,30 @@ const myData = {
 const myFunction = function(){
     console.log("Hellow Vinay")
 }
+ 
+// **************************************
+// Stack and Heap in JS
+console.log("---------------------------------")
 
+// Stack (Primitive), 
+
+let myName = "Vinay Kumar"
+
+let anotherName = myName
+anotherName = "Vira"
+
+console.log(myName);
+console.log(anotherName);
+
+// Heap (Non-Premitive)
+
+let user1 ={
+    email : "vinay@email.com",
+    upi : "vinay@ybl"
+}
+let user2 = user1;
+
+user2.email = "vira@email.com"
+
+console.log(user1);
+console.log(user2);
