@@ -171,3 +171,73 @@ function newGame() {
 }
 
 ```
+
+# Source Code
+
+## Project-5 (Key press)
+
+### JavaScript code
+
+```javaScript
+  const insert = document.querySelector('#insert')
+
+const keyPressed = window.addEventListener('keydown', function(e){
+    // console.log(e)
+    insert.innerHTML = `
+    <div class='color'>
+    <table>
+    <tr>
+      <th>Key</th>
+      <th>KeyCode</th>
+      <th>Code</th>
+    </tr>
+    <tr>
+      <td>${e.key}</td>
+      <td>${e.keyCode} </td>
+      <td>${e.code}</td>
+    </tr>
+    </table>
+    </div>
+    `
+})
+```
+
+# Sourec Code
+
+## Project-6 (UnlimitedBack-groundCOlor-Changer)
+
+### JavaScript Code
+
+```Javascript
+const start = document.querySelector('#start')
+const stop = document.querySelector('#stop')
+
+const colorGenerator = function(){
+    const hex = '0123456789ABCDEF'
+    let color = '#';
+    
+    for(let i = 0; i<6; i++){
+        color += hex[Math.floor(Math.random()*16)]
+    }
+    return color;
+}
+
+let continueChanging;
+
+const startChanging = function(){
+    if(!continueChanging){
+        continueChanging = setInterval(function(){
+            document.querySelector('body').style.backgroundColor = colorGenerator();
+        },1000)
+    }
+}
+
+const stopChanging = function(){
+    clearInterval(continueChanging)
+    continueChanging = null;
+}
+
+start.addEventListener('click', startChanging)
+stop.addEventListener('click',stopChanging)
+
+```
