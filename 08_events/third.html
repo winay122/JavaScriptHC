@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const showTimmer = document.querySelector('h1')
+
+    const sayDate = function(str){
+        const time = (str, new Date().toLocaleTimeString());
+        showTimmer.innerHTML = `${time}`
+    }
+
+    let startTimmer;
+    const timer = function(){
+        startTimmer = setInterval(sayDate, 1000, "hi")
+    }
+    
+    const stopTimmer = function(){
+        clearInterval(startTimmer)
+    }
+    
+    document.querySelector('#start').addEventListener('click', timer)
+
+    document.querySelector('#stop').addEventListener('click', stopTimmer)
+
+
+
+    
+
+    
+</script>
+</html>
